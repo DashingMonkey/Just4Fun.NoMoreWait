@@ -1,2 +1,8 @@
 # Just4Fun.NoMoreWait
-😀 Just For Fun &amp; No More Wait (What you see is exactly what I mean.)
+😀 Just For Fun & No More Wait
+
+# Techniques to adapt
+- Spring boot v2
+- RESTTemplate
+- AngularJS
+- Bootstrap v4
