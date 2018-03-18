@@ -29,3 +29,33 @@ hs_err_pid*
 
 # Ignore data
 **/data/**
+
+
+
+# compiled output
+/NoMoreWait-Front/NoMoreWait-Front/dist
+/NoMoreWait-Front/NoMoreWait-Front/dist-server
+/NoMoreWait-Front/NoMoreWait-Front/tmp
+/NoMoreWait-Front/NoMoreWait-Front/out-tsc
+
+# dependencies
+/node_modules
+
+
+
+
+# misc
+/NoMoreWait-Front/NoMoreWait-Front/.sass-cache
+/NoMoreWait-Front/NoMoreWait-Front/connect.lock
+/NoMoreWait-Front/NoMoreWait-Front/coverage
+/NoMoreWait-Front/NoMoreWait-Front/libpeerconnection.log
+/NoMoreWait-Front/NoMoreWait-Frontnpm-debug.log
+/NoMoreWait-Front/NoMoreWait-Frontyarn-error.log
+/NoMoreWait-Front/NoMoreWait-Fronttestem.log
+/NoMoreWait-Front/NoMoreWait-Front/typings
+
+# e2e
+**/e2e/*.js
+**/e2e/*.map
+
+
