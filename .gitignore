@@ -24,6 +24,9 @@ hs_err_pid*
 # IDE files
 .idea/**
 
+# Maven temp
+**/target/*
+
 # Project files
 **/*.iml
 
@@ -58,4 +61,7 @@ hs_err_pid*
 /NoMoreWait-Front/NoMoreWait-Front/e2e/*.js
 /NoMoreWait-Front/NoMoreWait-Front/e2e/*.map
 
+
+# spring server front file
+/NoMoreWait-Server/src/main/resources/static/**
 
