@@ -22,28 +22,28 @@
  * SOFTWARE.
  */
 
-import { Component, OnInit } from '@angular/core';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-@Component({
-  selector: 'app-footer',
-  templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.css']
-})
-export class FooterComponent implements OnInit {
+import { DirectionCardComponent } from './direction-card.component';
 
-  copyrightOwner:string='copyright owner';
+describe('DirectionCardComponent', () => {
+  let component: DirectionCardComponent;
+  let fixture: ComponentFixture<DirectionCardComponent>;
 
-  // TODO, update from server
-  yearFrom:number=new Date("1900").getFullYear();
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [ DirectionCardComponent ]
+    })
+    .compileComponents();
+  }));
 
-  yearTo:number=new Date().getFullYear();
+  beforeEach(() => {
+    fixture = TestBed.createComponent(DirectionCardComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-  // TODO, update from server
-  extraInfo:string="infor";
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-}
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

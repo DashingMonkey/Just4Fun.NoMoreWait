@@ -21,22 +21,39 @@
   ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
   ~ SOFTWARE.
   -->
-<nz-header class="header-color">
-  <div class="brand">
-    <img src="assets/imgs/logo.ico" class="logo-img">
-  </div>
-  <div class="nav">
-    <span class="nav-brand">Brand</span>
-    <ul nz-menu [nzTheme]="'light'" [nzMode]="'horizontal'" class="nav-menu" [nzClickActive]="false">
-      <!--<li nz-menu-item class="nav-menu-item"><i class="anticon anticon-setting" style="font-size: large;"></i></li>-->
-      <li nz-menu-item class="nav">
-        <nz-popover  [nzPlacement]="'bottomRight'" >
-          <i nz-popover class="anticon anticon-setting" style="font-size: large;margin: 0"></i>
-          <ng-template #nzTemplate>
-            <div style="width: 150px"><nz-slider [nzMarks]="mark" [nzDefaultValue]="currentInterval" [nzMin]="1" [(ngModel)]="currentInterval" [nzMax]="60"></nz-slider>Current Update Interval: {{currentInterval}}s</div>
-          </ng-template>
-        </nz-popover>
-      </li>
-    </ul>
-  </div>
-</nz-header>
+
+<nz-card [nzBordered]="false" [nzLoading]="loading">
+  <ng-template #title>
+    {{directionTitle}}
+  </ng-template>
+  <ng-template #extra>
+    <!--<i class="anticon anticon-retweet"></i>-->
+    <!--<a routerLink="{{extraRouterLink}}">More</a>-->
+    <a routerLink="."><i class="anticon anticon-reload"></i></a>
+  </ng-template>
+  <ng-template #body>
+    <nz-timeline>
+      <nz-timeline-item [nzColor]="'green'">
+        <div>
+          <h5>{{title0}}</h5>
+          <p>{{desc0}}</p>
+        </div>
+
+      </nz-timeline-item>
+      <ng-template #pending>
+        <div>
+          <h5>{{title0}}</h5>
+          <p>{{desc0}}</p>
+        </div>
+      </ng-template>
+    </nz-timeline>
+    <!--<nz-steps [(nzCurrent)]="currentLocation"  [nzDirection]="stepBarDirection" [nzSize]="'small'" [nzProgressDot]="false">-->
+      <!--<nz-step [nzTitle]="title0" [nzDescription]="desc0" ></nz-step>-->
+      <!--<nz-step [nzTitle]="title1" [nzDescription]="desc1" ></nz-step>-->
+    <!--</nz-steps>-->
+      <app-routes-card></app-routes-card>
+  </ng-template>
+
+
+
+</nz-card>

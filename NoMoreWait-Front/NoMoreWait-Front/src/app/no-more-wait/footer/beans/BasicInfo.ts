@@ -1,7 +1,7 @@
 /*
  * MIT License
  *
- * Copyright (c) 2018 
+ * Copyright (c) 2018
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -22,12 +22,49 @@
  * SOFTWARE.
  */
 
-import {Component} from '@angular/core';
+export class BasicInfo{
+  private _copyrightOwner:string;
+  private _copyrightOwnerLink:string;
+  private _info:string;
+  private _yearFrom:number;
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
-})
-export class AppComponent {
+
+  constructor(copyrightOwner: string, copyrightOwnerLink: string, info: string, yearFrom: number) {
+    this._copyrightOwner = copyrightOwner;
+    this._copyrightOwnerLink = copyrightOwnerLink;
+    this._info = info;
+    this._yearFrom = yearFrom;
+  }
+
+  get copyrightOwner(): string {
+    return this._copyrightOwner;
+  }
+
+  set copyrightOwner(value: string) {
+    this._copyrightOwner = value;
+  }
+
+  get copyrightOwnerLink(): string {
+    return this._copyrightOwnerLink;
+  }
+
+  set copyrightOwnerLink(value: string) {
+    this._copyrightOwnerLink = value;
+  }
+
+  get info(): string {
+    return this._info;
+  }
+
+  set info(value: string) {
+    this._info = value;
+  }
+
+  get yearFrom(): number {
+    return this._yearFrom;
+  }
+
+  set yearFrom(value: number) {
+    this._yearFrom = value;
+  }
 }

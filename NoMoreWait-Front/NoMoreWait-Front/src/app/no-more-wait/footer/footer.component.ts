@@ -22,28 +22,32 @@
  * SOFTWARE.
  */
 
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {Component, OnInit} from '@angular/core';
+import {BasicInfoService} from "./services/basic-info.service";
+import {BasicInfo} from "./beans/BasicInfo";
 
-import { FooterComponent } from './footer.component';
+@Component({
+  selector: 'app-footer',
+  templateUrl: './footer.component.html',
+  styleUrls: ['./footer.component.css']
+})
+export class FooterComponent implements OnInit {
 
-describe('FooterComponent', () => {
-  let component: FooterComponent;
-  let fixture: ComponentFixture<FooterComponent>;
+  info: BasicInfo=new BasicInfo("owner","/","",1900);
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ FooterComponent ]
-    })
-    .compileComponents();
-  }));
+  yearTo: number = new Date().getFullYear();
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(FooterComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+
+  constructor(private basicInfoService: BasicInfoService) {
+  }
+
+  ngOnInit() {
+    this.updateInfo();
+  }
+
+  private updateInfo(): void {
+    this.basicInfoService.getBasicInfo().subscribe(theInfo => this.info = theInfo);
+  }
+
+}

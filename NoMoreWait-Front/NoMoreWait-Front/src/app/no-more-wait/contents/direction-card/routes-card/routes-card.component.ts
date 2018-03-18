@@ -22,12 +22,33 @@
  * SOFTWARE.
  */
 
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-routes-card',
+  templateUrl: './routes-card.component.html',
+  styleUrls: ['./routes-card.component.css']
 })
-export class AppComponent {
+export class RoutesCardComponent implements OnInit {
+
+  displayDetails: boolean = true; // need to be false when prod
+
+  colorComing: string = 'green';
+  colorWaiting: string = 'blue';
+  colorTerminal: string = 'blue';
+
+  routesNumber: number = 0;
+
+
+  constructor() {
+  }
+
+  ngOnInit() {
+
+  }
+
+  loadRoutes(): void { // TODO, update the reture value
+    this.routesNumber = 5;
+  }
+
 }

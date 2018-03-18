@@ -25,11 +25,14 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-contents',
-  templateUrl: './contents.component.html',
-  styleUrls: ['./contents.component.css']
+  selector: 'app-sidebar',
+  templateUrl: './sidebar.component.html',
+  styleUrls: ['./sidebar.component.css']
 })
-export class ContentsComponent implements OnInit {
+export class SidebarComponent implements OnInit {
+  // collapse status for slider
+  isCollapsed:boolean=true;
+
 
   constructor() { }
 

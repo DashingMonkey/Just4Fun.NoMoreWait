@@ -24,25 +24,25 @@
 
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-
-
-import {AppComponent} from './app.component';
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {NgZorroAntdModule} from "ng-zorro-antd";
-import {HeaderComponent} from './header/header.component';
-import {ContentsComponent} from './contents/contents.component';
-import {FooterComponent} from './footer/footer.component';
-import {SidebarComponent} from './sidebar/sidebar.component';
-import {DirectionCardComponent} from './contents/direction-card/direction-card.component';
-import {RoutesCardComponent} from './contents/direction-card/routes-card/routes-card.component';
-import {RouterModule, Routes} from "@angular/router";
-import {ExceptionHandlerComponent} from './exception-handler/exception-handler.component';
 
-const routes:Routes=[
-  {path: '**', component: ExceptionHandlerComponent}
-];
+
+import {AppComponent} from './app.component';
+import {NgZorroAntdModule} from "ng-zorro-antd";
+import {HeaderComponent} from './no-more-wait/header/header.component';
+import {ContentsComponent} from './no-more-wait/contents/contents.component';
+import {FooterComponent} from './no-more-wait/footer/footer.component';
+import {SidebarComponent} from './no-more-wait/sidebar/sidebar.component';
+import {DirectionCardComponent} from './no-more-wait/contents/direction-card/direction-card.component';
+import {RoutesCardComponent} from './no-more-wait/contents/direction-card/routes-card/routes-card.component';
+import {ExceptionHandlerComponent} from './exception-handler/exception-handler.component';
+import {AppRoutingModule} from "./routing/routing.module";
+import { NoMoreWaitComponent } from './no-more-wait/no-more-wait.component';
+import {FooterModule} from "./no-more-wait/footer/footer.module";
+import {HashLocationStrategy, LocationStrategy} from "@angular/common";
+
 
 @NgModule({
   declarations: [
@@ -54,6 +54,7 @@ const routes:Routes=[
     DirectionCardComponent,
     RoutesCardComponent,
     ExceptionHandlerComponent,
+    NoMoreWaitComponent,
   ],
   imports: [
     BrowserModule,
@@ -61,12 +62,13 @@ const routes:Routes=[
     HttpClientModule,
     BrowserAnimationsModule,
     NgZorroAntdModule.forRoot(),
-    RouterModule.forRoot(routes)
+    AppRoutingModule,
+    FooterModule
   ],
-  providers: [],
+  providers: [{provide:LocationStrategy,useClass:HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 
 
-
-export class AppModule { }
+export class AppModule {
+}

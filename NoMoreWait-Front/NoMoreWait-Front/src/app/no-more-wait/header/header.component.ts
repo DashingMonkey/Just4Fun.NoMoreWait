@@ -1,7 +1,7 @@
 /*
  * MIT License
  *
- * Copyright (c) 2018 
+ * Copyright (c) 2018
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -22,12 +22,31 @@
  * SOFTWARE.
  */
 
-import {Component} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.css']
 })
-export class AppComponent {
+export class HeaderComponent implements OnInit {
+  currentInterval:number=5;
+
+  loadingSettings:boolean=false;
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+  mark = {
+    1  : '1',
+    60: {
+      style: {
+        color: '#f50',
+      },
+      label: '<strong>60</strong>',
+    }
+  };
+
 }

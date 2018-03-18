@@ -22,7 +22,39 @@
   ~ SOFTWARE.
   -->
 
-<nz-footer style="text-align: center;">
-  {{copyrightOwner}} ©{{yearFrom}} - {{yearTo}}
-  <div *ngIf="extraInfo.length">{{extraInfo}}</div>
-</nz-footer>
+<div nz-card-grid [ngStyle]="{width:'100%'}">
+
+  <div style="margin-bottom: 8px">
+    <h4> // Routes Solution + DESC</h4>
+    <hr />
+  </div>
+
+
+  <div *ngIf="displayDetails">
+    <nz-timeline>
+
+      <nz-timeline-item [nzColor]="colorComing">
+        <ng-template #custom>
+          <i class="anticon anticon-clock-circle-o" style="font-size: 16px;"></i>
+        </ng-template>
+        // waiting for stops info here.
+      </nz-timeline-item>
+
+      <nz-timeline-item [nzColor]="colorWaiting">
+        <div>
+          <h5>{{title0}}</h5>
+          <p>{{desc0}}</p>
+        </div>
+
+      </nz-timeline-item>
+
+
+      <ng-template #pending>
+        <div>
+          <h5>// Off bus stop</h5>
+          <p>// desc of the position.</p>
+        </div>
+      </ng-template>
+    </nz-timeline>
+  </div>
+</div>

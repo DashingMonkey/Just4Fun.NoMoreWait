@@ -22,29 +22,25 @@
  * SOFTWARE.
  */
 
-import { Component, OnInit } from '@angular/core';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from "@angular/router";
+import {ExceptionHandlerComponent} from "../exception-handler/exception-handler.component";
+import {NoMoreWaitComponent} from "../no-more-wait/no-more-wait.component";
 
-@Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+
+const routes: Routes = [
+  {path: '', redirectTo: "/HuiNanMetroStation", pathMatch: 'full'},
+  {path:'HuiNanMetroStation',component:NoMoreWaitComponent},
+];
+
+@NgModule({
+  imports: [
+    RouterModule.forRoot(routes)
+  ],
+  declarations: [],
+  exports: [
+    RouterModule
+  ]
 })
-export class HeaderComponent implements OnInit {
-  currentInterval:number=5;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-  mark = {
-    1  : '1',
-    60: {
-      style: {
-        color: '#f50',
-      },
-      label: '<strong>60</strong>',
-    }
-  };
-
+export class AppRoutingModule {
 }
