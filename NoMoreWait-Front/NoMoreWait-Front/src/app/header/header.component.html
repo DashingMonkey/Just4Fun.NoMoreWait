@@ -1,0 +1,42 @@
+<!--
+  ~ MIT License
+  ~
+  ~ Copyright (c) 2018
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+<nz-header class="header-color">
+  <div class="brand">
+    <img src="assets/imgs/logo.ico" class="logo-img">
+  </div>
+  <div class="nav">
+    <span class="nav-brand">Brand</span>
+    <ul nz-menu [nzTheme]="'light'" [nzMode]="'horizontal'" class="nav-menu" [nzClickActive]="false">
+      <!--<li nz-menu-item class="nav-menu-item"><i class="anticon anticon-setting" style="font-size: large;"></i></li>-->
+      <li nz-menu-item class="nav">
+        <nz-popover  [nzPlacement]="'bottomRight'" >
+          <i nz-popover class="anticon anticon-setting" style="font-size: large;margin: 0"></i>
+          <ng-template #nzTemplate>
+            <div style="width: 150px"><nz-slider [nzMarks]="mark" [nzDefaultValue]="currentInterval" [nzMin]="1" [(ngModel)]="currentInterval" [nzMax]="60"></nz-slider>Current Update Interval: {{currentInterval}}s</div>
+          </ng-template>
+        </nz-popover>
+      </li>
+    </ul>
+  </div>
+</nz-header>

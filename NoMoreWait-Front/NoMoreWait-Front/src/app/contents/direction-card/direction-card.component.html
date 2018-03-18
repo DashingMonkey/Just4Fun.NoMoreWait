@@ -1,0 +1,36 @@
+<nz-card [nzBordered]="false" [nzLoading]="loading">
+  <ng-template #title>
+    {{directionTitle}}
+  </ng-template>
+  <ng-template #extra>
+    <!--<i class="anticon anticon-retweet"></i>-->
+    <!--<a routerLink="{{extraRouterLink}}">More</a>-->
+    <a routerLink="."><i class="anticon anticon-reload"></i></a>
+  </ng-template>
+  <ng-template #body>
+    <nz-timeline>
+      <nz-timeline-item [nzColor]="'green'">
+        <div>
+          <h5>{{title0}}</h5>
+          <p>{{desc0}}</p>
+        </div>
+
+      </nz-timeline-item>
+      <ng-template #pending>
+        <div>
+          <h5>{{title0}}</h5>
+          <p>{{desc0}}</p>
+        </div>
+      </ng-template>
+    </nz-timeline>
+    <!--<nz-steps [(nzCurrent)]="currentLocation"  [nzDirection]="stepBarDirection" [nzSize]="'small'" [nzProgressDot]="false">-->
+      <!--<nz-step [nzTitle]="title0" [nzDescription]="desc0" ></nz-step>-->
+      <!--<nz-step [nzTitle]="title1" [nzDescription]="desc1" ></nz-step>-->
+    <!--</nz-steps>-->
+
+    <app-routes-card></app-routes-card>
+  </ng-template>
+
+
+
+</nz-card>
