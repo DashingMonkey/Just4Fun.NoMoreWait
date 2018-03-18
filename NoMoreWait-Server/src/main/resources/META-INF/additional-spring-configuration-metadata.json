@@ -1,0 +1,24 @@
+{
+  "properties": [
+    {
+      "name": "com.arvinsichuan.just4fun.nomorewait.basicinfo.info",
+      "type": "java.lang.String",
+      "description": "Basic info displayed on the footer."
+    },
+    {
+      "name": "com.arvinsichuan.just4fun.nomorewait.basicinfo.owner",
+      "type": "java.lang.String",
+      "description": "The owner displayed on the footer."
+    },
+    {
+      "name": "com.arvinsichuan.just4fun.nomorewait.basicinfo.owner-link",
+      "type": "java.lang.String",
+      "description": "Link for the owner displayed on the footer."
+    },
+    {
+      "name": "com.arvinsichuan.just4fun.nomorewait.basicinfo.year-from",
+      "type": "java.lang.Number",
+      "description": "Copyright started year displayed on the footer."
+    }
+  ]
+}
