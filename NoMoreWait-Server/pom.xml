@@ -35,6 +35,7 @@
         <spring.boot.version>${parent.version}</spring.boot.version>
         <mysqlserver.version>5.1.44</mysqlserver.version>
         <lombok.version>1.16.20</lombok.version>
+        <maven.maven-compiler-plugin.version>3.5.1</maven.maven-compiler-plugin.version>
     </properties>
 
     <parent>
@@ -96,6 +97,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.maven-compiler-plugin.version}</version>
                 <configuration>
                     <proc>none</proc>
                 </configuration>
