@@ -28,7 +28,7 @@ hs_err_pid*
 **/*.iml
 
 # Ignore data
-**/data/**
+*/data/**
 
 
 
@@ -39,7 +39,7 @@ hs_err_pid*
 /NoMoreWait-Front/NoMoreWait-Front/out-tsc
 
 # dependencies
-/node_modules
+/NoMoreWait-Front/NoMoreWait-Front/node_modules
 
 
 
@@ -55,7 +55,7 @@ hs_err_pid*
 /NoMoreWait-Front/NoMoreWait-Front/typings
 
 # e2e
-**/e2e/*.js
-**/e2e/*.map
+/NoMoreWait-Front/NoMoreWait-Front/e2e/*.js
+/NoMoreWait-Front/NoMoreWait-Front/e2e/*.map
 
 
