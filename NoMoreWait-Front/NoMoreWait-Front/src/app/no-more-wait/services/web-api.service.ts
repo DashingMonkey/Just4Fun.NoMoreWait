@@ -3,6 +3,7 @@ import {Observable} from "rxjs/Observable";
 import {stringDistance} from "codelyzer/util/utils";
 import {of} from "rxjs/observable/of";
 import {HttpClient} from "@angular/common/http";
+import {LogLevel, LogService} from '../../log-service/log.service';
 
 
 const WEB_API_BASE_URL: string = 'http://localhost:8081/';
@@ -27,19 +28,15 @@ export class WebApiService {
   protected handleError<T> (operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
 
-      // TODO: send the error to remote logging infrastructure
-      console.error(error); // log to console instead
+      LogService.log(LogLevel.ERROR,error); // log to console instead
 
-      // TODO: better job of transforming error for user consumption
-      WebApiService.log(`${operation} failed: ${error.message}`);
+
+      LogService.log(LogLevel.ERROR, `${operation} failed: ${error.message}`);
 
       // Let the app keep running by returning an empty result.
       return of(result as T);
     };
   }
 
-  private static log(msg: string){
-    console.log(msg);
-  }
 
 }

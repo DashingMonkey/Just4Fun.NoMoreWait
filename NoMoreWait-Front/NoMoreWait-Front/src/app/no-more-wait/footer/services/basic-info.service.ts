@@ -18,11 +18,11 @@ export class BasicInfoService extends WebApiService {
     let url=BasicInfoService.getApiUrl()+"info/";
     log('Fetching...');
     log(url);
-    let obersarble:Observable<BasicInfo> = this.http.get<BasicInfo>(url).pipe(
+    let observable:Observable<BasicInfo> = this.http.get<BasicInfo>(url).pipe(
       catchError(this.handleError('getHeroes',BasicInfo.prototype))
     );
     log('Fetching End');
-    return obersarble;
+    return observable;
   }
 
 }
