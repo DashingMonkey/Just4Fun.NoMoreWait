@@ -23,12 +23,11 @@
   -->
 <nz-header class="header-color">
   <div class="brand">
-    <img src="assets/imgs/logo.ico" class="logo-img">
+    <img src="assets/imgs/logo.ico" class="logo-img" alt="Logo">
   </div>
   <div class="nav">
     <span class="nav-brand">Brand</span>
     <ul nz-menu [nzTheme]="'light'" [nzMode]="'horizontal'" class="nav-menu" [nzClickActive]="false">
-      <!--<li nz-menu-item class="nav-menu-item"><i class="anticon anticon-setting" style="font-size: large;"></i></li>-->
       <li class="nav">
         <nz-popover  [nzPlacement]="'bottomRight'" [nzTrigger]="'click'">
           <button nz-button [nzType]="'default'" nzGhost [nzShape]="'circle'" [nzLoading]="loadingSettings" nz-popover style="border:none"><i  class="anticon anticon-setting" style="font-size: large;margin: 0"></i></button>
