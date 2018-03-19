@@ -5,7 +5,7 @@ jdk:
 after_success:
   - mvn sonar:sonar -Dsonar.organization=arvinsichuan-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${SONAR_TOKEN}
   - cd .. && wget https://sonarsource.bintray.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-3.0.3.778-linux.zip && unzip sonar-scanner-cli-3.0.3.778-linux.zip
-  - cd NoMoreWait-Front && ../sonar-scanner-3.0.3.778-linux/bin/sonar-scanner -Dsonar.projectKey=no-more-wait-angular -Dsonar.organization=arvinsichuan-github -Dsonar.sources=. -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${SONAR_TOKEN_NG}
+  - cd NoMoreWait-Front && ../sonar-scanner-3.0.3.778-linux/bin/sonar-scanner -Dsonar.projectKey=no-more-wait-ng -Dsonar.organization=arvinsichuan-github -Dsonar.sources=. -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${SONAR_TOKEN_NG}
 notifications:
   email:
     - Arvinsc@foxmail.com
