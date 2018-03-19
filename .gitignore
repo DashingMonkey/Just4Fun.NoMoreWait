@@ -36,30 +36,30 @@ hs_err_pid*
 
 
 # compiled output
-/NoMoreWait-Front/NoMoreWait-Front/dist
-/NoMoreWait-Front/NoMoreWait-Front/dist-server
-/NoMoreWait-Front/NoMoreWait-Front/tmp
-/NoMoreWait-Front/NoMoreWait-Front/out-tsc
+/NoMoreWait-Front/dist
+/NoMoreWait-Front/dist-server
+/NoMoreWait-Front/tmp
+/NoMoreWait-Front/out-tsc
 
 # dependencies
-/NoMoreWait-Front/NoMoreWait-Front/node_modules
+/NoMoreWait-Front/node_modules
 
 
 
 
 # misc
-/NoMoreWait-Front/NoMoreWait-Front/.sass-cache
-/NoMoreWait-Front/NoMoreWait-Front/connect.lock
-/NoMoreWait-Front/NoMoreWait-Front/coverage
-/NoMoreWait-Front/NoMoreWait-Front/libpeerconnection.log
-/NoMoreWait-Front/NoMoreWait-Frontnpm-debug.log
-/NoMoreWait-Front/NoMoreWait-Frontyarn-error.log
-/NoMoreWait-Front/NoMoreWait-Fronttestem.log
-/NoMoreWait-Front/NoMoreWait-Front/typings
+/NoMoreWait-Front/.sass-cache
+/NoMoreWait-Front/connect.lock
+/NoMoreWait-Front/coverage
+/NoMoreWait-Front/libpeerconnection.log
+/NoMoreWait-Frontnpm-debug.log
+/NoMoreWait-Frontyarn-error.log
+/NoMoreWait-Fronttestem.log
+/NoMoreWait-Front/typings
 
 # e2e
-/NoMoreWait-Front/NoMoreWait-Front/e2e/*.js
-/NoMoreWait-Front/NoMoreWait-Front/e2e/*.map
+/NoMoreWait-Front/e2e/*.js
+/NoMoreWait-Front/e2e/*.map
 
 
 # spring server front file
