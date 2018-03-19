@@ -52,9 +52,9 @@ hs_err_pid*
 /NoMoreWait-Front/connect.lock
 /NoMoreWait-Front/coverage
 /NoMoreWait-Front/libpeerconnection.log
-/NoMoreWait-Frontnpm-debug.log
-/NoMoreWait-Frontyarn-error.log
-/NoMoreWait-Fronttestem.log
+/NoMoreWait-Front/npm-debug.log
+/NoMoreWait-Front/yarn-error.log
+/NoMoreWait-Front/testem.log
 /NoMoreWait-Front/typings
 
 # e2e
