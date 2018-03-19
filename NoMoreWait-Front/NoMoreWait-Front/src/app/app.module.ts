@@ -37,7 +37,6 @@ import {FooterComponent} from './no-more-wait/footer/footer.component';
 import {SidebarComponent} from './no-more-wait/sidebar/sidebar.component';
 import {DirectionCardComponent} from './no-more-wait/contents/direction-card/direction-card.component';
 import {RoutesCardComponent} from './no-more-wait/contents/direction-card/routes-card/routes-card.component';
-import {ExceptionHandlerComponent} from './exception-handler/exception-handler.component';
 import {AppRoutingModule} from "./routing/routing.module";
 import { NoMoreWaitComponent } from './no-more-wait/no-more-wait.component';
 import {FooterModule} from "./no-more-wait/footer/footer.module";
@@ -53,7 +52,6 @@ import {HashLocationStrategy, LocationStrategy} from "@angular/common";
     SidebarComponent,
     DirectionCardComponent,
     RoutesCardComponent,
-    ExceptionHandlerComponent,
     NoMoreWaitComponent,
   ],
   imports: [

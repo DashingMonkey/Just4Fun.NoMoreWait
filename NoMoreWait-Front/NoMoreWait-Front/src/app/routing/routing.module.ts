@@ -24,7 +24,6 @@
 
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from "@angular/router";
-import {ExceptionHandlerComponent} from "../exception-handler/exception-handler.component";
 import {NoMoreWaitComponent} from "../no-more-wait/no-more-wait.component";
 
 
