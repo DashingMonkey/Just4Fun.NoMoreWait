@@ -3,9 +3,11 @@ install: cd NoMoreWait-Server/ && mvn clean && mvn compile && mvn install -Dskip
 jdk:
   - oraclejdk8
 after_success:
+  - mvn sonar:sonar -Dsonar.organization=arvinsichuan-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${SONAR_TOKEN}
   - pwd
   - cd ../
-  - mvn sonar:sonar -Dsonar.organization=arvinsichuan-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${SONAR_TOKEN}
+  - wget https://sonarsource.bintray.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-3.0.3.778-linux.zip && unzip sonar-scanner-cli-3.0.3.778-linux.zip
+  -
 notifications:
   email:
     - Arvinsc@foxmail.com
