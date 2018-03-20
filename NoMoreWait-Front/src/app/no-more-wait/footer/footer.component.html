@@ -23,6 +23,6 @@
   -->
 
 <nz-footer style="text-align: center;">
-  <a href="{{info.copyrightOwnerLink}}">{{info.copyrightOwner}}</a> ©{{info.yearFrom}} - {{yearTo}}
-  <div *ngIf="info.info && info.info.length">{{info.info}}</div>
+  <a href="{{info?.copyrightOwnerLink}}">{{info?.copyrightOwner}}</a> ©{{info?.yearFrom}} - {{yearTo}}
+  <div *ngIf="info?.info?.length">{{info?.info}}</div>
 </nz-footer>
